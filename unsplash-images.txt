@@ -1,0 +1,28 @@
+Unsplash image manifest for local download
+
+Place the following files into the `images/` folder in the project root. These are the images referenced by `index.html`.
+
+Suggested filenames and direct image URLs (right-click -> Save As OR use the PowerShell commands in README.md):
+
+1) hero.jpg
+   https://source.unsplash.com/1600x900/?computer,workspace
+   Hero image for the site (modern tech workspace)
+
+2) about.jpg
+   (already present in your `images/` folder)
+   Local image used in the About section
+
+3) ssd-drive.jpg
+   https://source.unsplash.com/1400x900/?ssd,storage
+   Product image: SSD drive
+
+4) ram-memory.jpg
+   https://source.unsplash.com/1400x900/?ram,memory,computer
+   Product image: RAM module
+
+5) gaming-mouse.jpg
+   https://source.unsplash.com/1400x900/?gaming,mouse
+   Product image: Gaming mouse
+
+Notes:
+- These images are hosted by Unsplash (free to use). If you prefer different photos, replace the files but keep the filenames referenced in the code or update the paths in `index.html`.
