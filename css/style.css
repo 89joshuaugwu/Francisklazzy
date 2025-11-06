@@ -15,9 +15,22 @@ html,body{
   color: #2d3748;
 }
 
+/* Prevent accidental horizontal overflow on small screens (keeps navbar/toggler inside viewport) */
+html, body { overflow-x: hidden; }
+
 /* NAVBAR */
 .navbar-brand{font-family: 'Inter', sans-serif; font-size:1.3rem; color:var(--primary); font-weight:700;} 
-.navbar .nav-link{color: rgba(255,255,255,0.9); font-weight:500;} /* HERO */
+.navbar .nav-link{color: rgba(255,255,255,0.95); font-weight:500;}
+/* Ensure the fixed navbar (and its toggler) appears above hero overlays */
+.navbar{z-index:1100}
+.navbar-toggler{border-color:rgba(255,255,255,0.12)}
+.navbar-toggler-icon{filter:brightness(1.2)}
+/* HERO */
+
+/* Ensure navbar container doesn't exceed viewport on small screens */
+.navbar > .container { max-width: 100%; padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+.navbar-toggler{z-index:1200}
+.navbar-collapse{background: transparent}
 .hero{
   min-height:100vh;
   /* Local hero image: place as images/hero.jpg */
@@ -65,6 +78,11 @@ footer{background:var(--secondary);}
 @media (min-width:992px){
   .site-title{font-size:4rem}
   .section-title{font-size:2.5rem}
+}
+
+/* Slightly reduce brand size on very small screens so it fits neatly */
+@media (max-width:575.98px){
+  .navbar-brand{font-size:1.05rem}
 }
 
 /* Small aesthetic touches */
